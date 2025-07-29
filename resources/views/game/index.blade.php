@@ -429,7 +429,7 @@
 
         .game-title {
             position: absolute;
-            top: 50%;
+            top: 35%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Orbitron', monospace;
@@ -446,22 +446,14 @@
             animation: titlePulse 3s ease-in-out infinite;
             text-align: center;
             z-index: 15;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 3px solid rgba(0, 255, 255, 0.3);
-            box-shadow: 
-                0 0 50px rgba(0, 255, 255, 0.3),
-                inset 0 0 30px rgba(0, 0, 0, 0.5);
         }
 
         .game-logo {
             position: absolute;
-            top: 50%;
+            top: 35%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 80vw;
+            max-width: 85vw;
             max-height: 50vh;
             width: auto;
             height: auto;
@@ -471,84 +463,34 @@
                 drop-shadow(0 0 90px #00ffff);
             animation: titlePulse 3s ease-in-out infinite;
             z-index: 15;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 
-                0 0 50px rgba(0, 255, 255, 0.3),
-                inset 0 0 30px rgba(0, 0, 0, 0.5);
         }
 
-        .arcade-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 80vw;
-            max-height: 50vh;
-            width: auto;
-            height: auto;
-            z-index: 15;
-            animation: titlePulse 3s ease-in-out infinite;
-        }
-
-        .arcade-cabinet {
-            width: 100%;
-            height: auto;
-            filter:
-                drop-shadow(0 0 30px #00ffff)
-                drop-shadow(0 0 60px #00ffff);
-        }
-
-        .arcade-screen {
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            transform: translate(-50%, -5%) perspective(500px) rotateX(-8deg);
-            width: 42%;
-            height: 20%;
-            z-index: 16;
-            border-radius: 8px;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .arcade-screen img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: 
-                drop-shadow(0 0 15px #00ffff)
-                drop-shadow(0 0 30px #00ffff);
-            animation: screenPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes screenPulse {
-            0%, 100% { 
-                transform: scale(1);
-                filter: 
-                    drop-shadow(0 0 15px #00ffff)
-                    drop-shadow(0 0 30px #00ffff);
-            }
-            50% { 
-                transform: scale(1.02);
-                filter: 
-                    drop-shadow(0 0 25px #00ffff)
-                    drop-shadow(0 0 50px #00ffff);
-            }
-        }
 
         @keyframes titlePulse {
             0%, 100% { transform: translate(-50%, -50%) scale(1); }
             50% { transform: translate(-50%, -50%) scale(1.05); }
         }
 
-        .game-tagline {
+        .text-zone {
             position: absolute;
-            top: 65%;
+            bottom: 20%;
             left: 50%;
             transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow:
+                0 0 30px rgba(0, 0, 0, 0.5),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+            max-width: 80%;
+            text-align: center;
+            z-index: 15;
+            line-height: 1.4;
+        }
+
+        .game-tagline {
             font-family: 'Orbitron', monospace;
             font-weight: 400;
             font-size: 16px;
@@ -556,46 +498,32 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff00ff;
-            text-align: center;
-            z-index: 15;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 12px 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-            border: 2px solid rgba(255, 0, 255, 0.4);
-            box-shadow: 
-                0 0 20px rgba(255, 0, 255, 0.3),
-                inset 0 0 15px rgba(0, 0, 0, 0.4);
-            max-width: 75%;
-            line-height: 1.3;
+            margin-bottom: 25px;
         }
 
         .start-prompt {
-            position: absolute;
-            bottom: 20%;
-            left: 50%;
-            transform: translateX(-50%);
             font-family: 'Orbitron', monospace;
             font-weight: 700;
             font-size: 20px;
-            color: #ff00ff;
+            color: #00ffff;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow:
-                0 0 5px #ff00ff,
-                0 0 10px #ff00ff,
-                0 0 15px #ff00ff;
+                0 0 5px #00ffff,
+                0 0 10px #00ffff,
+                0 0 15px #00ffff;
             animation: promptBlink 1.5s ease-in-out infinite;
-            text-align: center;
-            z-index: 15;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px 25px;
-            border-radius: 12px;
-            backdrop-filter: blur(8px);
-            border: 2px solid rgba(255, 0, 255, 0.3);
-            box-shadow: 
-                0 0 25px rgba(255, 0, 255, 0.4),
-                inset 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+        }
+
+        .leaderboard-prompt {
+            font-family: 'Orbitron', monospace;
+            font-weight: 400;
+            font-size: 14px;
+            color: #ffff00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #ffff00;
         }
 
         @keyframes promptBlink {
@@ -826,14 +754,14 @@
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-            box-shadow: 
+            box-shadow:
                 0 0 15px rgba(0, 255, 255, 0.3),
                 inset 0 0 15px rgba(0, 0, 0, 0.3);
         }
 
         .audio-toggle:hover {
             border-color: #ff00ff;
-            box-shadow: 
+            box-shadow:
                 0 0 25px rgba(255, 0, 255, 0.5),
                 inset 0 0 20px rgba(0, 0, 0, 0.4);
             transform: scale(1.05);
@@ -841,14 +769,14 @@
 
         .audio-toggle.muted {
             border-color: #ff4444;
-            box-shadow: 
+            box-shadow:
                 0 0 15px rgba(255, 68, 68, 0.3),
                 inset 0 0 15px rgba(0, 0, 0, 0.3);
         }
 
         .audio-toggle.muted:hover {
             border-color: #ff6666;
-            box-shadow: 
+            box-shadow:
                 0 0 25px rgba(255, 102, 102, 0.5),
                 inset 0 0 20px rgba(0, 0, 0, 0.4);
         }
@@ -968,9 +896,9 @@
                         <img src="/images/taylor.jpg" alt="Taylor">
                         <div class="vs-name">TAYLOR</div>
                     </div>
-                    
+
                     <div class="vs-text-simple">VS</div>
-                    
+
                     <div class="vs-face villain">
                         <img id="villain-image" src="" alt="Villain">
                         <div class="vs-name" id="villain-name-short"></div>
@@ -984,9 +912,6 @@
                     </div>
                 </div>
 
-                <div class="mission-text neon-text" style="position: absolute; bottom: 20px; text-align: center; font-size: 14px; color: #00ff00; text-shadow: 0 0 10px #00ff00;">
-                    HELP TAYLOR GET TO HIS LAMBO
-                </div>
             </div>
         </div>
 
@@ -996,27 +921,24 @@
         <!-- Main Menu Overlay -->
         <div id="main-menu" class="main-menu">
             <div id="title-container">
-                <div id="arcade-logo" class="arcade-container" style="display: none;">
-                    <img class="arcade-cabinet" src="/images/arcade.png" alt="Arcade Cabinet">
-                    <div class="arcade-screen">
-                        <img src="/images/logo.png" alt="Game Logo">
-                    </div>
-                </div>
                 <img id="game-logo" class="game-logo" src="/images/logo.png" alt="Game Logo" style="display: none;">
                 <div id="game-title" class="game-title neon-text" style="display: block;">
                     🚗 HELP TAYLOR<br>FIND HIS LAMBO 🏎️
                 </div>
             </div>
-            <div class="game-tagline neon-text">
-                Taylor's Lambo has been stolen!<br>
-                Navigate the neon mazes at lightning speed<br>
-                to escape the villains and reclaim his ride!
-            </div>
-            <div class="start-prompt neon-text">
-                Press SPACE or ENTER to begin
-            </div>
-            <div class="leaderboard-prompt neon-text" style="position: absolute; bottom: 12%; left: 50%; transform: translateX(-50%); font-family: 'Orbitron', monospace; font-weight: 400; font-size: 14px; color: #00ffff; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 5px #00ffff; text-align: center; z-index: 15; background: rgba(0, 0, 0, 0.6); padding: 8px 15px; border-radius: 8px; backdrop-filter: blur(6px); border: 1px solid rgba(0, 255, 255, 0.3); box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.3);">
-                Press ESC or TAB for Leaderboard
+
+            <div class="text-zone">
+                <div class="game-tagline neon-text">
+                    Taylor's Lambo has been stolen!<br>
+                    Navigate the neon mazes at lightning speed<br>
+                    to escape the villains and reclaim his ride!
+                </div>
+                <div class="start-prompt neon-text">
+                    Press ENTER to begin
+                </div>
+                <div class="leaderboard-prompt neon-text">
+                    Press ESC or TAB for Leaderboard
+                </div>
             </div>
         </div>
 
@@ -1073,45 +995,38 @@
             backgroundMusic = document.getElementById('background-music');
             const savedMusicState = getCookie('musicEnabled');
             musicEnabled = savedMusicState !== 'false'; // Default to true unless explicitly disabled
-            
+
             if (backgroundMusic) {
                 backgroundMusic.volume = 0.3; // Set volume to 30%
-                
-                if (musicEnabled) {
-                    // Try to play music on page load
-                    const playPromise = backgroundMusic.play();
-                    if (playPromise !== undefined) {
-                        playPromise.catch(() => {
-                            // Auto-play blocked, user will need to interact first
-                            console.log('Audio auto-play blocked - user interaction required');
-                        });
-                    }
-                }
+                // Start paused to avoid auto-play issues
+                backgroundMusic.pause();
                 updateAudioButton();
             }
         }
 
         function toggleAudio() {
             if (!backgroundMusic) return;
-            
+
             musicEnabled = !musicEnabled;
             setCookie('musicEnabled', musicEnabled, 30);
-            
+
             if (musicEnabled) {
-                backgroundMusic.play().catch(() => {
-                    console.log('Audio play failed');
-                });
+                setTimeout(() => {
+                    backgroundMusic.play().catch(() => {
+                        console.log('Audio play failed');
+                    });
+                }, 500); // Shorter delay for manual toggle
             } else {
                 backgroundMusic.pause();
             }
-            
+
             updateAudioButton();
         }
 
         function updateAudioButton() {
             const toggleButton = document.getElementById('audio-toggle');
             const audioIcon = document.getElementById('audio-icon');
-            
+
             if (musicEnabled) {
                 toggleButton.classList.remove('muted');
                 audioIcon.textContent = '🔊';
@@ -1121,12 +1036,14 @@
             }
         }
 
-        // Try to resume audio on user interaction
+        // Try to resume audio on user interaction with delay
         function resumeAudioContext() {
             if (backgroundMusic && musicEnabled && backgroundMusic.paused) {
-                backgroundMusic.play().catch(() => {
-                    // Silent fail
-                });
+                setTimeout(() => {
+                    backgroundMusic.play().catch(() => {
+                        console.log('Audio playback failed after delay');
+                    });
+                }, 1000); // 1 second delay
             }
         }
 
@@ -1143,7 +1060,7 @@
                 setCookie('playerGitHub', playerGitHub, 30);
                 document.getElementById('name-prompt').style.display = 'none';
                 updateWelcomeMessage();
-                
+
                 // Resume audio on user interaction
                 resumeAudioContext();
             } else {
@@ -1380,8 +1297,8 @@
 
         function spawnVillains() {
             gameState.villains = [];
-            // Progressive villain count: Level 1=3, Level 2=5, Level 3=7, Level 4=9, Level 5=12
-            const villainCounts = [0, 3, 5, 7, 9, 12];
+            // Balanced villain count - Level 1=6, Level 2=12, Level 3=18, Level 4=20, Level 5=27
+            const villainCounts = [0, 6, 12, 18, 20, 27];
             const numVillains = villainCounts[gameState.level] || 3;
             const size = gameState.maze.length;
 
@@ -1393,7 +1310,7 @@
                     x = Math.floor(Math.random() * size);
                     y = Math.floor(Math.random() * size);
                     attempts++;
-                } while (attempts < 50 && (
+                } while (attempts < 200 && (
                     gameState.maze[y][x] === 1 ||
                     (x === gameState.playerX && y === gameState.playerY) ||
                     (gameState.maze[y][x] === 3) ||
@@ -1401,7 +1318,7 @@
                     (x >= size-4 && x <= size-2 && y >= size-4 && y <= size-2)
                 ));
 
-                if (attempts < 50) {
+                if (attempts < 200) {
                     // All villains in a level use the same image (current level villain)
                     const villainId = gameState.level;
                     gameState.villains.push({
@@ -1427,9 +1344,9 @@
 
         function startVillainMovement() {
             clearInterval(villainTimer);
-            // Slower villains in later levels for better visibility
-            const baseSpeeds = [0, 1000, 900, 800, 700, 650, 600, 550];
-            const moveSpeed = baseSpeeds[gameState.level] || 550;
+            // Much faster and more aggressive villains
+            const baseSpeeds = [0, 400, 350, 300, 250, 200];
+            const moveSpeed = baseSpeeds[gameState.level] || 200;
 
             villainTimer = setInterval(() => {
                 if (gameState.isPlaying && gameState.villains.length > 0) {
@@ -1741,7 +1658,7 @@
 
             // Handle menu controls
             if (!gameState.gameStarted) {
-                if (e.key === ' ' || e.key === 'Enter') {
+                if (e.key === 'Enter') {
                     e.preventDefault();
                     startGame();
                     return;
@@ -1846,49 +1763,21 @@
         });
 
         function loadGameLogo() {
-            const arcadeLogo = document.getElementById('arcade-logo');
             const logoImg = document.getElementById('game-logo');
             const titleText = document.getElementById('game-title');
 
-            // First try to load arcade cabinet
-            const arcadeImg = new Image();
-            arcadeImg.onload = function() {
-                // Check if the screen logo also exists
-                const screenImg = new Image();
-                screenImg.onload = function() {
-                    // Both arcade and screen logo exist, show arcade version
-                    arcadeLogo.style.display = 'block';
-                    logoImg.style.display = 'none';
-                    titleText.style.display = 'none';
-                };
-                screenImg.onerror = function() {
-                    // Arcade exists but screen logo doesn't, fallback to regular logo
-                    tryRegularLogo();
-                };
-                screenImg.src = '/images/logo.png';
+            const img = new Image();
+            img.onload = function() {
+                // Logo exists, show it and hide text
+                logoImg.style.display = 'block';
+                titleText.style.display = 'none';
             };
-            arcadeImg.onerror = function() {
-                // Arcade doesn't exist, try regular logo
-                tryRegularLogo();
+            img.onerror = function() {
+                // Logo doesn't exist, keep text title
+                logoImg.style.display = 'none';
+                titleText.style.display = 'block';
             };
-            arcadeImg.src = '/images/arcade.png';
-
-            function tryRegularLogo() {
-                const img = new Image();
-                img.onload = function() {
-                    // Regular logo exists, show it and hide text
-                    logoImg.style.display = 'block';
-                    titleText.style.display = 'none';
-                    arcadeLogo.style.display = 'none';
-                };
-                img.onerror = function() {
-                    // No logos exist, keep text title
-                    logoImg.style.display = 'none';
-                    titleText.style.display = 'block';
-                    arcadeLogo.style.display = 'none';
-                };
-                img.src = '/images/logo.png';
-            }
+            img.src = '/images/logo.png';
         }
 
         async function initializeGame() {
@@ -1897,7 +1786,7 @@
             checkPlayerName();
             updateDisplay();
             initializeAudio();
-            
+
             // Add event listeners to resume audio on any user interaction
             document.addEventListener('click', resumeAudioContext, { once: true });
             document.addEventListener('keydown', resumeAudioContext, { once: true });
